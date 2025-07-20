@@ -1,4 +1,3 @@
-cat > listings/serializers.py << 'EOF'
 from rest_framework import serializers
 from .models import Listing, Booking, Review
 
@@ -74,4 +73,3 @@ class ReviewSerializer(serializers.ModelSerializer):
             'listing_title', 'rating', 'comment', 'created_at', 'updated_at'
         ]
         read_only_fields = ['created_at', 'updated_at', 'guest', 'booking']
-EOF
